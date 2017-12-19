@@ -11,7 +11,6 @@ namespace HelloWorld
         static void Main(string[] args)
         {
             Console.WriteLine("Hello!");
-            Console.ReadLine();
             string myName;
             myName = Console.ReadLine();
             Console.WriteLine("Hello World " + myName);

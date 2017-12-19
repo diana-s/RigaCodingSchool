@@ -6,15 +6,14 @@ using System.Threading.Tasks;
 
 namespace HelloWorld
 {
-    class Program
+    class personal_greeting
     {
-        static void Main(string[] args)
+        public void SayHello()
         {
-            personal_greeting greet;
-            greet = new personal_greeting();
-            greet.SayHello();
+            string myName;
+            myName = "Diana";
+            Console.WriteLine("Hello " + myName);
             Console.ReadLine();
-
         }
     }
 }

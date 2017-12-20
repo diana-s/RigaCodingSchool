@@ -8,12 +8,13 @@ namespace HelloWorld
 {
     class personal_greeting
     {
+        public string HelloText;
         public void SayHello()
         {
             string myName;
-            myName = "Diana";
-            Console.WriteLine("Hello " + myName);
-            Console.ReadLine();
+            myName = Console.ReadLine();
+            Console.WriteLine(HelloText + myName);
+            
         }
     }
 }

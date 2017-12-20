@@ -12,9 +12,15 @@ namespace HelloWorld
         {
             personal_greeting greet;
             greet = new personal_greeting();
+            greet.HelloText = "Hell world!";
             greet.SayHello();
-            Console.ReadLine();
+            
+            personal_greeting greetnew;
+            greetnew = new personal_greeting();
+            greetnew.HelloText = "Aloha";
+            greetnew.SayHello();
 
+            Console.ReadLine();
         }
     }
 }

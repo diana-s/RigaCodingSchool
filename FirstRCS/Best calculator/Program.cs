@@ -25,8 +25,11 @@ namespace Best_calculator
 
             //saskaita abas vērtības
             int result = firstNumber + secondNumber;
+            //pievienoju uzrunas teksts lietotājam
             Console.WriteLine("Congratulation! Your result is:");
+            //parādās rezultāts
             Console.WriteLine(result);
+            //apstādinam ekrānu, lai nepazūd uzreiz, bet pēc enter klikšķa
             Console.ReadLine();
         }
     }

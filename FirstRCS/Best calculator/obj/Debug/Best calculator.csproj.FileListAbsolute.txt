@@ -1,0 +1,7 @@
+C:\Users\Diana\CODES\RigaCodingSchool\FirstRCS\Best calculator\bin\Debug\Best calculator.exe.config
+C:\Users\Diana\CODES\RigaCodingSchool\FirstRCS\Best calculator\bin\Debug\Best calculator.exe
+C:\Users\Diana\CODES\RigaCodingSchool\FirstRCS\Best calculator\bin\Debug\Best calculator.pdb
+C:\Users\Diana\CODES\RigaCodingSchool\FirstRCS\Best calculator\obj\Debug\Best calculator.csprojResolveAssemblyReference.cache
+C:\Users\Diana\CODES\RigaCodingSchool\FirstRCS\Best calculator\obj\Debug\Best calculator.csproj.CoreCompileInputs.cache
+C:\Users\Diana\CODES\RigaCodingSchool\FirstRCS\Best calculator\obj\Debug\Best calculator.exe
+C:\Users\Diana\CODES\RigaCodingSchool\FirstRCS\Best calculator\obj\Debug\Best calculator.pdb

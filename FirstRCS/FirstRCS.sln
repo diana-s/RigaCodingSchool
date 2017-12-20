@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld", "HelloWorld\He
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Best calculator", "Best calculator\Best calculator.csproj", "{A4EABD0E-4520-4C67-9661-C3D791DEE268}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmarterBestCalculator", "SmarterBestCalculator\SmarterBestCalculator.csproj", "{2EFF89E8-279F-47CE-982E-150DE8F0B690}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{A4EABD0E-4520-4C67-9661-C3D791DEE268}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A4EABD0E-4520-4C67-9661-C3D791DEE268}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A4EABD0E-4520-4C67-9661-C3D791DEE268}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EFF89E8-279F-47CE-982E-150DE8F0B690}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EFF89E8-279F-47CE-982E-150DE8F0B690}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EFF89E8-279F-47CE-982E-150DE8F0B690}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EFF89E8-279F-47CE-982E-150DE8F0B690}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

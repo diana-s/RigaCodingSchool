@@ -1,0 +1,7 @@
+C:\Users\Diana\CODES\RigaCodingSchool\FirstRCS\SmarterBestCalculator\obj\Debug\SmarterBestCalculator.csprojResolveAssemblyReference.cache
+C:\Users\Diana\CODES\RigaCodingSchool\FirstRCS\SmarterBestCalculator\obj\Debug\SmarterBestCalculator.csproj.CoreCompileInputs.cache
+C:\Users\Diana\CODES\RigaCodingSchool\FirstRCS\SmarterBestCalculator\bin\Debug\SmarterBestCalculator.exe.config
+C:\Users\Diana\CODES\RigaCodingSchool\FirstRCS\SmarterBestCalculator\bin\Debug\SmarterBestCalculator.exe
+C:\Users\Diana\CODES\RigaCodingSchool\FirstRCS\SmarterBestCalculator\bin\Debug\SmarterBestCalculator.pdb
+C:\Users\Diana\CODES\RigaCodingSchool\FirstRCS\SmarterBestCalculator\obj\Debug\SmarterBestCalculator.exe
+C:\Users\Diana\CODES\RigaCodingSchool\FirstRCS\SmarterBestCalculator\obj\Debug\SmarterBestCalculator.pdb

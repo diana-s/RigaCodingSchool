@@ -1,0 +1,15 @@
+C:\Users\Diana\CODES\RigaCodingSchool\FirstRCS\BuyList\bin\Debug\BuyList.exe.config
+C:\Users\Diana\CODES\RigaCodingSchool\FirstRCS\BuyList\bin\Debug\BuyList.exe
+C:\Users\Diana\CODES\RigaCodingSchool\FirstRCS\BuyList\bin\Debug\BuyList.pdb
+C:\Users\Diana\CODES\RigaCodingSchool\FirstRCS\BuyList\obj\Debug\BuyList.csprojResolveAssemblyReference.cache
+C:\Users\Diana\CODES\RigaCodingSchool\FirstRCS\BuyList\obj\Debug\MainWindow.g.cs
+C:\Users\Diana\CODES\RigaCodingSchool\FirstRCS\BuyList\obj\Debug\App.g.cs
+C:\Users\Diana\CODES\RigaCodingSchool\FirstRCS\BuyList\obj\Debug\BuyList_MarkupCompile.cache
+C:\Users\Diana\CODES\RigaCodingSchool\FirstRCS\BuyList\obj\Debug\BuyList_MarkupCompile.lref
+C:\Users\Diana\CODES\RigaCodingSchool\FirstRCS\BuyList\obj\Debug\MainWindow.baml
+C:\Users\Diana\CODES\RigaCodingSchool\FirstRCS\BuyList\obj\Debug\BuyList.g.resources
+C:\Users\Diana\CODES\RigaCodingSchool\FirstRCS\BuyList\obj\Debug\BuyList.Properties.Resources.resources
+C:\Users\Diana\CODES\RigaCodingSchool\FirstRCS\BuyList\obj\Debug\BuyList.csproj.GenerateResource.Cache
+C:\Users\Diana\CODES\RigaCodingSchool\FirstRCS\BuyList\obj\Debug\BuyList.csproj.CoreCompileInputs.cache
+C:\Users\Diana\CODES\RigaCodingSchool\FirstRCS\BuyList\obj\Debug\BuyList.exe
+C:\Users\Diana\CODES\RigaCodingSchool\FirstRCS\BuyList\obj\Debug\BuyList.pdb

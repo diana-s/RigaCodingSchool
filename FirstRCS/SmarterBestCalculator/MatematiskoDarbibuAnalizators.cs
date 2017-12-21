@@ -10,7 +10,7 @@ namespace SmarterBestCalculator
     {
         //funkcija, kas saņem lietotāja ievadītu tekstu un saparsē to, veic matemātiskās darbības
         //un atgriež rezultātu
-        public int ParseMath()
+        public int ParseMath(string input)
     
         {
              //1+5  (3 vienibas darbībā, izejošā pozīcija ir 0tā pozīcija (nulles punkts))

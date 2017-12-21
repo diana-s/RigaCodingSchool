@@ -24,7 +24,7 @@ namespace Best_calculator
            int secondNumber = calc.AskUserForNumber();
 
             //saskaita abas vērtības
-            int result = firstNumber + secondNumber;
+            int result = firstNumber - secondNumber;
             //pievienoju uzrunas teksts lietotājam
             Console.WriteLine("Congratulation! Your result is:");
             //parādās rezultāts

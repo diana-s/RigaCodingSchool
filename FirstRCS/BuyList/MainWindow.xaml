@@ -8,15 +8,15 @@
         Title="MainWindow" Height="350" Width="525">
     <Grid Background="Aqua">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="477*"/>
-            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
-        <TextBox x:Name ="BuyListItemName" Background="Black" HorizontalAlignment="Left" FontSize="10" FontFamily="Arial" Height="30" Margin="34,23,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name ="AddListItemButton" Content="Pievienot" Click="AddListItemButton_Click" FontFamily="Arial" HorizontalAlignment="Left" Margin="56,67,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-1.44,-1.35"/>
-        <ScrollViewer Margin ="100">
-            <ItemsControl x:Name ="BuyItemListControl"/> 
+        <TextBox x:Name ="BuyListItemName" Background="ForestGreen" HorizontalAlignment="Left" TextAlignment="Center" FontStyle="Italic" FontSize="10" FontFamily="Arial" Height="30" Margin="211,27,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name ="AddListItemButton" Content="Pievienot" Background="AntiqueWhite" Click="AddListItemButton_Click" FontFamily="Arial" HorizontalAlignment="Left" Margin="364,39,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-1.44,-1.35" Height="18"/>
+        <ScrollViewer Margin ="10,100,0,100">
+            <ItemsControl x:Name ="BuyItemListControl"/>
         </ScrollViewer>
-       
+
 
     </Grid>
 </Window>

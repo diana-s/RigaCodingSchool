@@ -6,16 +6,29 @@
         xmlns:local="clr-namespace:BuyList"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Grid Background="Aqua">
+    <Grid Background="BlueViolet">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
-        <TextBox x:Name ="BuyListItemName" Background="ForestGreen" HorizontalAlignment="Left" TextAlignment="Center" FontStyle="Italic" FontSize="10" FontFamily="Arial" Height="30" Margin="211,27,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name ="AddListItemButton" Content="Pievienot" Background="AntiqueWhite" Click="AddListItemButton_Click" FontFamily="Arial" HorizontalAlignment="Left" Margin="364,39,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-1.44,-1.35" Height="18"/>
+        <TextBox x:Name ="BuyListItemName" Background="White" HorizontalAlignment="Left" TextAlignment="Center" FontStyle="Italic" FontSize="10" FontFamily="Arial" Height="30" Margin="86,50,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="248" />
+        <Button x:Name ="AddListItemButton" Content="Pievienot" Background="AntiqueWhite" Click="AddListItemButton_Click" FontFamily="Arial" HorizontalAlignment="Left" Margin="351,50,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-1.44,-1.35" Height="30"/>
         <ScrollViewer Margin ="10,100,0,100">
-            <ItemsControl x:Name ="BuyItemListControl"/>
+            <ListBox x:Name ="BuyItemListControl" FontFamily="Script" >
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <WrapPanel>
+
+                            <TextBlock Text="{Binding }" />
+                        </WrapPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
         </ScrollViewer>
+        <Button x:Name ="SaveItems" Content="Saglabāt" Margin="422,233,20,0" VerticalAlignment="Top" Click="SaveItems_Click" Width="75" Height="35"/>
+        <Button x:Name ="Return" Content="Atgriezt" HorizontalAlignment="Left" Margin="342,233,0,0" VerticalAlignment="Top" Width="75" Height="35" Click="Return_Click"/>
+        <Label x:Name ="Text" Content="Lūdzu ievadiet pirkumu" FontStyle="Italic" FontWeight="DemiBold" HorizontalAlignment="Left" Margin="86,10,0,0" Background="Wheat" VerticalAlignment="Top" Width="248"/>
+        <Button x:Name ="DeleteButton" Content="Dzēst" HorizontalAlignment="Left" Margin="10,233,0,0" VerticalAlignment="Top" Width="59" Click="DeleteButton_Click"/>
 
 
     </Grid>

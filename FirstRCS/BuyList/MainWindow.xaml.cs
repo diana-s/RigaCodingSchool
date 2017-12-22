@@ -16,7 +16,8 @@ using System.Windows.Shapes;
 namespace BuyList
 {
     using System.Collections.ObjectModel;
-
+    using System.IO;
+    
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
@@ -31,7 +32,7 @@ namespace BuyList
         public MainWindow()
         {
             InitializeComponent();
-            BuyListItemName.Text = "lūdzu ievadiet pirkumu";
+            BuyListItemName.Text = "";
             this.BuyItemsList.Add("āboli");
             // pasakamkontrolē i laiizmanto mūsu sarakstu
             this.BuyItemsList.Add("bumbieri");
@@ -51,6 +52,25 @@ namespace BuyList
             //Taču šoreiz mēs gribam, lai Textboksā parādās neierobezots skaits ar atzīmētajiem tekstiem Textboksā
             this.BuyItemsList.Add(x);
 
+
+        }
+
+        private void SaveItems_Click(object sender, RoutedEventArgs e)
+        {
+            File.WriteAllLines(@"C:\Users\Diana\CODES\RigaCodingSchool.test.txt", this.BuyItemsList);
+        }
+
+        private void Return_Click(object sender, RoutedEventArgs e)
+        {
+           string ReturnFromFile = File.ReadAllLines(@"C:\Users\Diana\CODES\RigaCodingSchool.test.txt");
+           this.BuyItemsList.Add(ReturnFromFile);
+
+        }
+
+        private void DeleteButton_Click(object sender, RoutedEventArgs e)
+        {
+            string selectedItems = this.BuyItemListControl.SelectedItems[0] as string;
+            this.BuyItemsList.Remove(selectedItems);
 
         }
     }

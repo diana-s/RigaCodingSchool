@@ -1,23 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows;
 
 namespace BuyList
 {
     using System.Collections.ObjectModel;
     using System.IO;
-    
+
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
@@ -62,9 +49,17 @@ namespace BuyList
 
         private void Return_Click(object sender, RoutedEventArgs e)
         {
-           string ReturnFromFile = File.ReadAllLines(@"C:\Users\Diana\CODES\RigaCodingSchool.test.txt");
-           this.BuyItemsList.Add(ReturnFromFile);
-
+            //Lai varētu iet cauri sarakstam klikšķinot lietas atsevišķi, lai viņas nerādās kā viens kopīgs saraksts
+           var ReturnFromFile = File.ReadAllLines(@"C:\Users\Diana\CODES\RigaCodingSchool.test.txt");
+            //i ir counters tikai īsāk nosaukts
+            //no sākuma sistēma skata i=0, tad tiek pie i<Return....., kad šis izpildās, sistēma izpilda, to, kas zemā sistēmā minēts
+            //kad viss izdarīts tad veic darbību i++, kas ir i = i+1
+            for(int i = 0; i < ReturnFromFile.Length; i++)
+            {
+                //xxx ir jauns mainīgais, kurš ir atsevišķi no visa kopējā saraksta un var viņu ieklikšķināt
+                var xxx = ReturnFromFile[i];
+                this.BuyItemsList.Add(xxx);
+            }
         }
 
         private void DeleteButton_Click(object sender, RoutedEventArgs e)

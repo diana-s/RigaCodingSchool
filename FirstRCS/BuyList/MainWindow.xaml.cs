@@ -67,6 +67,7 @@ namespace BuyList
             string selectedItems = this.BuyItemListControl.SelectedItems[0] as string;
             this.BuyItemsList.Remove(selectedItems);
 
+           
         }
     }
 }

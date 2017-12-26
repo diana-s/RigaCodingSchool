@@ -11,14 +11,15 @@ namespace SmarterBestCalculator
         static void Main(string[] args)
         {
             //izveido kalkulatora objektu
-            MatematiskoDarbibuAnalizators parser;
-            parser = new MatematiskoDarbibuAnalizators();
+            Class1 mathcycle;
+            mathcycle = new Class1();
 
             //paprasīt lietotājam ievadīt ievadi
-            Console.WriteLine("please enter darbību");
+            Console.WriteLine("please enter operation");
             string input = Console.ReadLine();
 
-            int result = parser.ParseMath(input);
+            int result = mathcycle.Cycle1(input);               
+            Console.WriteLine("your result is = "+ result);
             Console.ReadLine();
         
         }

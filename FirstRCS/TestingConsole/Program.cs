@@ -18,7 +18,7 @@ namespace TestingConsole
             
 
             int c = Int32.Parse(a) + Int32.Parse(b);
-            Console.WriteLine("Sum of {0} + {1} is: {3}", a, b, c);
+            Console.WriteLine("Sum of {0} + {1} is: {2}", a, b, c);
             Console.ReadLine();
 
             int d = Int32.Parse(a) - Int32.Parse(b);

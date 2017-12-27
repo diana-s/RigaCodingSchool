@@ -1,0 +1,7 @@
+C:\Users\Diana\CODES\RigaCodingSchool\FirstRCS\TrainingApp1\obj\Debug\TrainingApp1.csproj.CoreCompileInputs.cache
+C:\Users\Diana\CODES\RigaCodingSchool\FirstRCS\TrainingApp1\bin\Debug\TrainingApp1.exe.config
+C:\Users\Diana\CODES\RigaCodingSchool\FirstRCS\TrainingApp1\bin\Debug\TrainingApp1.exe
+C:\Users\Diana\CODES\RigaCodingSchool\FirstRCS\TrainingApp1\bin\Debug\TrainingApp1.pdb
+C:\Users\Diana\CODES\RigaCodingSchool\FirstRCS\TrainingApp1\obj\Debug\TrainingApp1.csprojResolveAssemblyReference.cache
+C:\Users\Diana\CODES\RigaCodingSchool\FirstRCS\TrainingApp1\obj\Debug\TrainingApp1.exe
+C:\Users\Diana\CODES\RigaCodingSchool\FirstRCS\TrainingApp1\obj\Debug\TrainingApp1.pdb

@@ -47,10 +47,8 @@ namespace SmarterBestCalculator
                       
 
             }
-
             return 0;
-
-
+            
        }
 
     }

@@ -1,0 +1,7 @@
+C:\Users\Diana\CODES\RigaCodingSchool\FirstRCS\TestingConsole\obj\Debug\TestingConsole.csproj.CoreCompileInputs.cache
+C:\Users\Diana\CODES\RigaCodingSchool\FirstRCS\TestingConsole\bin\Debug\TestingConsole.exe.config
+C:\Users\Diana\CODES\RigaCodingSchool\FirstRCS\TestingConsole\bin\Debug\TestingConsole.exe
+C:\Users\Diana\CODES\RigaCodingSchool\FirstRCS\TestingConsole\bin\Debug\TestingConsole.pdb
+C:\Users\Diana\CODES\RigaCodingSchool\FirstRCS\TestingConsole\obj\Debug\TestingConsole.exe
+C:\Users\Diana\CODES\RigaCodingSchool\FirstRCS\TestingConsole\obj\Debug\TestingConsole.pdb
+C:\Users\Diana\CODES\RigaCodingSchool\FirstRCS\TestingConsole\obj\Debug\TestingConsole.csprojResolveAssemblyReference.cache

@@ -24,6 +24,8 @@ namespace SmarterBestCalculator
             int result1 = mathcycle.Cycle1(input);
             int result2 = matchcycle2.Cycle2(input);
 
+
+
             if (result1 == mathcycle.Cycle1(input))
             {
                 Console.WriteLine("your result is = " + result1);

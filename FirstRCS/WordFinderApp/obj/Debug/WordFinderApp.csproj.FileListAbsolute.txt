@@ -1,0 +1,6 @@
+C:\Users\Diana\CODES\RigaCodingSchool\FirstRCS\WordFinderApp\bin\Debug\WordFinderApp.exe.config
+C:\Users\Diana\CODES\RigaCodingSchool\FirstRCS\WordFinderApp\bin\Debug\WordFinderApp.exe
+C:\Users\Diana\CODES\RigaCodingSchool\FirstRCS\WordFinderApp\bin\Debug\WordFinderApp.pdb
+C:\Users\Diana\CODES\RigaCodingSchool\FirstRCS\WordFinderApp\obj\Debug\WordFinderApp.csproj.CoreCompileInputs.cache
+C:\Users\Diana\CODES\RigaCodingSchool\FirstRCS\WordFinderApp\obj\Debug\WordFinderApp.exe
+C:\Users\Diana\CODES\RigaCodingSchool\FirstRCS\WordFinderApp\obj\Debug\WordFinderApp.pdb

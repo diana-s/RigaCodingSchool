@@ -16,8 +16,7 @@ namespace TrainingApp1
             Console.WriteLine("Result is =" + result);
 
             Console.ReadLine();
-
-        
+                    
         }
         
           

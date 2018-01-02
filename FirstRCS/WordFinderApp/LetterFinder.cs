@@ -21,16 +21,10 @@ namespace WordFinderApp
             int counter = 0;
             while (counter<input.Length)
             {
-                string letter = Match
+                string letter;
 
 
-                    public static IEnumerable<int> IndexOfAll(this string sourceString, string matchString)
-                {
-                    matchString = Regex.Escape(matchString);
-                    return from Match match in Regex.Matches(sourceString, matchString) select match.Index;
-                }
-
-
+               
             }
 
 

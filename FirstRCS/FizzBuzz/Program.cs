@@ -36,7 +36,7 @@ namespace FizzBuzz
                 //norādu, ka i = ievadīto lietotāja tekstu, kurš pārveidots par ciparu
                 //un ja es norādu, ka i <= 100, tad sistēma norāda visus ciparus spēlē līdz 100
                 //P.s. ja es ievadītu tikai StartNUmber <= 100, sistēma neapstatos pie 100, bet turpinātu rādīt paziņojumus
-                for (int i = StartNumber; i<= 100; i++)
+                for (int i = StartNumber+1; i<= 100; i++)
 
                 {
 

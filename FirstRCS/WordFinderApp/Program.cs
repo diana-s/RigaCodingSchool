@@ -27,13 +27,11 @@ namespace WordFinderApp
                 // Get character from array.
                 var UniqueLetterSplit = array[i];
             }
-
-
+            
             var dictionaryFilePath = @"C:\Users\Diana\CODES\RigaCodingSchool\wordFinder.txt";
             var allWordsInFile = File.ReadAllLines(dictionaryFilePath);
 
-            var resultList = new List<string>();
-
+            
             
 
 

@@ -120,6 +120,7 @@ namespace BuyList
             {
                 this.BuyItemsList.Add(this.BuyListItemName.Text);
 
+                //pēc funkcijas izpildes, testa ievades lauks paliek tukšs
                 this.BuyListItemName.Text = "";
             }
         }

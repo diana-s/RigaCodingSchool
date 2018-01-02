@@ -26,17 +26,12 @@ namespace SmarterBestCalculator
 
 
 
-            if (result1 == mathcycle.Cycle1(input))
+            if (result1 == mathcycle.Cycle1(input)|| result2 == matchcycle2.Cycle2(input))
             {
                 Console.WriteLine("your result is = " + result1);
                 Console.ReadLine();
             }
-            if(result2 == matchcycle2.Cycle2(input))
-               {
-                    Console.WriteLine("your result is = " + result2);
-                    Console.ReadLine();
-                }
-
+           
                     
                  
         }

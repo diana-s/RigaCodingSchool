@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FizzBuzz", "FizzBuzz\FizzBu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordFinderApp", "WordFinderApp\WordFinderApp.csproj", "{3692B584-EDD5-4C76-AE39-3115ACD1950C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatDatingSite", "CatDatingSite\CatDatingSite.csproj", "{FDB1FC2C-5B36-4104-BBCC-C2ED241090DA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{3692B584-EDD5-4C76-AE39-3115ACD1950C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3692B584-EDD5-4C76-AE39-3115ACD1950C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3692B584-EDD5-4C76-AE39-3115ACD1950C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDB1FC2C-5B36-4104-BBCC-C2ED241090DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDB1FC2C-5B36-4104-BBCC-C2ED241090DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDB1FC2C-5B36-4104-BBCC-C2ED241090DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDB1FC2C-5B36-4104-BBCC-C2ED241090DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

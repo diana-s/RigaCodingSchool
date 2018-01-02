@@ -1,4 +1,5 @@
 ﻿<Window x:Class="BuyList.MainWindow"
+        Closing="MainWindowClosing"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -11,7 +12,7 @@
             <ColumnDefinition/>
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
-        <TextBox x:Name ="BuyListItemName" Background="White" HorizontalAlignment="Left" TextAlignment="Center" FontStyle="Italic" FontSize="10" FontFamily="Arial" Height="30" Margin="86,50,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="248" />
+        <TextBox x:Name ="BuyListItemName" KeyDown="EnterAddItem" Background="White" HorizontalAlignment="Left" TextAlignment="Center" FontStyle="Italic" FontSize="10" FontFamily="Arial" Height="30" Margin="86,50,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="248" />
         <Button x:Name ="AddListItemButton" Content="Pievienot" Background="AntiqueWhite" Click="AddListItemButton_Click" FontFamily="Arial" HorizontalAlignment="Left" Margin="351,50,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-1.44,-1.35" Height="30"/>
         <ScrollViewer Margin ="10,100,0,100">
             <ListBox x:Name ="BuyItemListControl" SelectionMode="Multiple" FontFamily="Script" >

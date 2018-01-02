@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 namespace BuyList
 {
     using System.Collections.ObjectModel;
+    using System.Windows.Input;
  
 
     /// <summary>
@@ -32,16 +33,17 @@ namespace BuyList
             BuyListItemName.Text = "";
 
             //pievienoju mainīgo, kas ir texta fails, kur saglabājās pirkumu saraksts
+            //[] norāda, ka šis mainīgais ir masīvs - vesels saraksts, tapēc string [] = var ....
             
-            var text = System.IO.File.ReadAllText(@"C:\Users\Diana\CODES\RigaCodingSchool.test.txt");
-
+            string[] AllItemsFromFile = System.IO.File.ReadAllLines(@"C:\Users\Diana\CODES\RigaCodingSchool.test.txt");
+            
             // pasakamkontrolē i laiizmanto mūsu sarakstu
             //šajā sarakstā norādam, lai automātiski parādās bumbieri (rakstot šajā.mainīgajā.Add();)
             this.BuyItemsList.Add("bumbieri");
             //tagad norādam, lai sarakstā parādās automātiski arī, tas, kas tika saglabāts iepriekš 
             //(ja saraksts tiek veidots pirmo reizi, tad tur noteikti parādīsies tukšums)
             //kas saglabājas failā. Iekavās rakstam mainīgo, kas šajā gadījumā ir "text"
-            BuyItemsList.Add(text);
+            
 
 
             //KOMENTĀRS PRIEKŠ MANIS :)"hmmm būtu forši izveidot kodu, kad lietotajam uzsākot darbu, automātiskis izveidojas savs personigais
@@ -50,13 +52,13 @@ namespace BuyList
 
             //tāpat rakstam mainīgā - kas ir šis bloks, kur parādās saraksts - lai pievieno izveidoto sarakstu
             BuyItemListControl.ItemsSource = BuyItemsList;
-            for (int i = 0; i < text.Length; i++)
+            //ar foreach iet cauri masīva katram elementam, izveidojam jaunu mainīgo - itemFromFile, kas saglabā atmiņā
+            //katru rindiņu
+            foreach (var itemFromFile in AllItemsFromFile)
             {
-                //xxx ir jauns mainīgais, kurš ir atsevišķi no visa kopējā saraksta un var viņu ieklikšķināt
-                var xxx = text[i];
+                this.BuyItemsList.Add(itemFromFile);
             }
-
-
+       
         }
 
         private void AddListItemButton_Click(object sender, RoutedEventArgs e)
@@ -86,7 +88,13 @@ namespace BuyList
             //i ir counters tikai īsāk nosaukts
             //no sākuma sistēma skata i=0, tad tiek pie i<Return....., kad šis izpildās, sistēma izpilda, to, kas zemā sistēmā minēts
             //kad viss izdarīts tad veic darbību i++, kas ir i = i+1
-           
+            for (int i = 0; i < ReturnFromFile.Length; i++)
+            {
+                //xxx ir jauns mainīgais, kurš ir atsevišķi no visa kopējā saraksta un var viņu ieklikšķināt
+                var xxx = ReturnFromFile[i];
+                this.BuyItemsList.Add("");
+            }
+
         }
 
         private void DeleteButton_Click(object sender, RoutedEventArgs e)
@@ -96,11 +104,24 @@ namespace BuyList
 
            
         }
-        private void Window_Closed(object sender, EventArgs e)
-        {
+        //tur, kur veidojam aplikaciju, zem window sadaļas (pirms Grid), ievadam Closing = "MainWindowClosing",
+        //kas nozīmē, kad aizverot visu logu, mēs izsaucam konkretu funkciju
 
+        private void MainWindowClosing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            //funkcija, ko izsaucam, ir ta pati, ko izsaucam nospiežot "Saglabāt" - saglabajas automatiski 
+            //ierakstītais saraksts failā
+            File.WriteAllLines(@"C:\Users\Diana\CODES\RigaCodingSchool.test.txt", this.BuyItemsList);
         }
 
-        
+        private void EnterAddItem(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            if(e.Key == Key.Enter)
+            {
+                this.BuyItemsList.Add(this.BuyListItemName.Text);
+
+                this.BuyListItemName.Text = "";
+            }
+        }
     }
 }

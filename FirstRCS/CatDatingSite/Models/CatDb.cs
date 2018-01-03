@@ -4,8 +4,14 @@ using System.Linq;
 using System.Web;
 
 namespace CatDatingSite.Models
+
+    //Lai izveidotu tabulu neizmantojot SQL, C# jaizmanto Entity Framwork bibliotēka
 {
-    public class CatDb
+    using System.Data.Entity;
+
+    public class CatDb : DbContext
     {
+        public DbSet<CatProfile> CatProfiles { get; set; }
     }
+
 }

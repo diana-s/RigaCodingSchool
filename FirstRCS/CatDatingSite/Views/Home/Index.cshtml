@@ -10,14 +10,15 @@
 
 <div class="row">
 
-    <!-- nosākuma, kad nebija Lists,mēs likām meklēt name, age utt @Model.CatName
-        Bet tā kā mums ir lists, sistēma met error pie @Model.CatName, CatAge utt...izmantojam foreach funkciju
-        pirms katra c# koda, liekam @  un mum sir jāizveido jauns mainīgais, ko nosaucam "cat", kurš atrodas šajā Model
-        un sistēmai liekam meklet nevis model, bet @cat.CatName utt-->
+    <!-- nosākuma, kad nebija Lists,mēs likām meklēt name, age utt atModel.CatName
+        Bet tā kā mums ir lists, sistēma met error pie atModel.CatName, CatAge utt...izmantojam foreach funkciju
+        pirms katra c# koda, liekam "at" un mum sir jāizveido jauns mainīgais, ko nosaucam "cat", kurš atrodas šajā Model
+        un sistēmai liekam meklet nevis model, bet atcat.CatName utt-->
     @foreach (var cat in Model)
 
     {
         <div class="col-md-4">
+            @Html.ActionLink("Nodzēst kaķi", "DeleteCats", "Home", new { deletableCatId = cat.CatID }, null)
             <h2>Cat Name: @cat.CatName</h2>
             <p> Cat age is: @cat.CatAge</p>
             <img src="@cat.CatImage" />

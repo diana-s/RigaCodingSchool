@@ -1,0 +1,35 @@
+﻿<!-- lai rakstītu komentarus ir jāievada <!--
+    mums no sākuma bija tikai CatDatingSite.Models.CatProfile, taču, tad ņem tikai vienu profilu
+    lai viņš ņemtu vairākus un no saraksta, jāpievieno List priekšā un iepriekšējā info jāieliek <>  -->
+
+@model  List<CatDatingSite.Models.CatProfile>
+    @{
+        ViewBag.Title = "Home Page";
+    }
+
+
+<div class="row">
+
+    <!-- nosākuma, kad nebija Lists,mēs likām meklēt name, age utt @Model.CatName
+        Bet tā kā mums ir lists, sistēma met error pie @Model.CatName, CatAge utt...izmantojam foreach funkciju
+        pirms katra c# koda, liekam @  un mum sir jāizveido jauns mainīgais, ko nosaucam "cat", kurš atrodas šajā Model
+        un sistēmai liekam meklet nevis model, bet @cat.CatName utt-->
+    @foreach (var cat in Model)
+
+    {
+        <div class="col-md-4">
+            <h2>Cat Name: @cat.CatName</h2>
+            <p> Cat age is: @cat.CatAge</p>
+            <img src="@cat.CatImage" />
+            <p>
+                ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
+                enables a clean separation of concerns and gives you full control over markup
+                for enjoyable, agile development.
+            </p>
+            <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+        </div>
+    }
+
+
+
+</div>

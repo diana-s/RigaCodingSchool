@@ -14,17 +14,18 @@ namespace SmarterBestCalculator
             Class1 mathcycle;
             mathcycle = new Class1();
 
-            while (true) {
+            while (true)
+            {
                 //paprasīt lietotājam ievadīt ievadi
                 Console.WriteLine("please enter operation");
                 string input = Console.ReadLine();
 
-                int result = mathcycle.Cycle1(input);
+                int result1 = mathcycle.Cycle1(input);
 
 
 
 
-                Console.WriteLine("your result is = " + result);
+                Console.WriteLine("your result is = " + result1);
                
             }
             

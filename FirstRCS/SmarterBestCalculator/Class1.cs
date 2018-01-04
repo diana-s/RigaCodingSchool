@@ -11,8 +11,7 @@ namespace SmarterBestCalculator
         public int Cycle1(string input)
        {
            string FirstEnteredNumber = "";
-           string SecondEnteredNumber = "";
-            char EnteredOperation = ' ';
+           char EnteredOperation = ' ';
             bool OperationFound = false;
             
             for(int counter = 0;  counter < input.Length; counter++)
@@ -30,16 +29,22 @@ namespace SmarterBestCalculator
                         FirstEnteredNumber = FirstEnteredNumber + symbol;
 
                     }
-                    else
-                    {
-                        SecondEnteredNumber = SecondEnteredNumber + symbol;
-                    }
+                    
                 }
                 
                 if (OperationFound == true)
                 {
                     if (EnteredOperation == '+')
                     {
+                        //Int32.Parse(SecondEnteredNumber) nomainijām uz this.Cycle1(input.Substring(counter+1), 
+                        //lai varētu ierakstīt vairākas saskaitīšanas vienā rindā un sistēma saprastu, ka ir vairāki '+',
+                        //nevis visi parējie simboli pēc pirmā '+' ir otrs ievadītais cipars (kā būtu, ja atstātu pirmo ievadi ar Int32...
+
+                        //Tā kā gribam, lai sistēma saprot, ka sekos vairākas saskaitīšanas un vairāki atsevišķi cipari, tad
+                        //liekam + this.Cycle1: kas nozīmē šakā konkrētajā ciklā
+                        //input:ievadītais "cipars" vai 'operācija'
+                        //Substring(counter+1): pieskaita konrēto ievadi, kas sākas no countera un iet tālāk uz priekšu (mūžīgi)
+                     
                         int result = Int32.Parse(FirstEnteredNumber) + this.Cycle1(input.Substring(counter + 1));
                         return result;
                     }

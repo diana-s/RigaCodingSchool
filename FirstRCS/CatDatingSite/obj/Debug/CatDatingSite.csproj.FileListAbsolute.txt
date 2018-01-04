@@ -69,3 +69,7 @@ C:\Users\Diana\CODES\RigaCodingSchool\FirstRCS\CatDatingSite\obj\Debug\CatDating
 C:\Users\Diana\CODES\RigaCodingSchool\FirstRCS\CatDatingSite\obj\Debug\CatDatingSite.csproj.CoreCompileInputs.cache
 C:\Users\Diana\CODES\RigaCodingSchool\FirstRCS\CatDatingSite\obj\Debug\CatDatingSite.dll
 C:\Users\Diana\CODES\RigaCodingSchool\FirstRCS\CatDatingSite\obj\Debug\CatDatingSite.pdb
+C:\Users\Diana\CODES\RigaCodingSchool\FirstRCS\CatDatingSite\obj\Debug\CatDatingSite.Migrations.InitialCreate.resources
+C:\Users\Diana\CODES\RigaCodingSchool\FirstRCS\CatDatingSite\obj\Debug\CatDatingSite.csproj.GenerateResource.Cache
+C:\Users\Diana\CODES\RigaCodingSchool\FirstRCS\CatDatingSite\obj\Debug\CatDatingSite.Migrations.catNameisrequiredBecausewewantedto.resources
+C:\Users\Diana\CODES\RigaCodingSchool\FirstRCS\CatDatingSite\obj\Debug\CatDatingSite.Migrations.addednewfield.resources

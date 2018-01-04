@@ -7,6 +7,8 @@ using System.Web.Mvc;
 namespace CatDatingSite.Controllers
 {
     using CatDatingSite.Models;
+    //Lai varētu izmantot AddOrUpdate funkciju ir jāpieraksta šis usings, kas apakšā :)
+    using System.Data.Entity.Migrations;
 
     public class CatsController : Controller
     {
@@ -59,6 +61,65 @@ namespace CatDatingSite.Controllers
             }
 
         }
+
+       
+
+        public ActionResult AddCats()
+        {
+            return View();
+        }
+
+        //mums ir jānorada, ka šī funkcija veic POST darbību
+        //ja nenorādam, viņš saprot, ka funkcija, kas jāveic ir Get nevis POST
+
+        [HttpPost]
+        public ActionResult AddCats(CatProfile userCreatedCat)
+        {
+            if (ModelState.IsValid == false)
+            {
+                return RedirectToAction("Index");
+            }
+            using (var CatDb = new CatDb())
+            {
+                CatDb.CatProfiles.Add(userCreatedCat);
+                CatDb.SaveChanges();
+
+                return RedirectToAction("Index");
+            }
+        }
+        [HttpPost]
+        public ActionResult EditCats(CatProfile catProfile)
+        {
+            if (ModelState.IsValid == false)
+            {
+                return RedirectToAction("Index");
+            }
+            using (var CatDb = new CatDb())
+            {
+                CatDb.CatProfiles.AddOrUpdate(catProfile);
+                CatDb.SaveChanges();
+
+                
+            }
+
+            return RedirectToAction("Index");
+        }
+           
+        public ActionResult EditCats(int editableCatId)
+        {
+          
+            using (var CatDb = new CatDb())
+            {
+                var editableCat = CatDb.CatProfiles.First(CatProfile => CatProfile.CatID == editableCatId);
+               
+                CatDb.SaveChanges();
+
+                return View("EditCats", editableCat);
+            }
+
+
+        }
+
         public ActionResult DeleteCats(int deletableCatId)
             {
                 using (var catDb = new CatDb())

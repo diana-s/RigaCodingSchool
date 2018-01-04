@@ -14,26 +14,22 @@ namespace SmarterBestCalculator
             Class1 mathcycle;
             mathcycle = new Class1();
 
-             Class2 matchcycle2;
-            matchcycle2 = new Class2();
+            while (true) {
+                //paprasīt lietotājam ievadīt ievadi
+                Console.WriteLine("please enter operation");
+                string input = Console.ReadLine();
 
-            //paprasīt lietotājam ievadīt ievadi
-            Console.WriteLine("please enter operation");
-            string input = Console.ReadLine();
-
-            int result1 = mathcycle.Cycle1(input);
-            int result2 = matchcycle2.Cycle2(input);
+                int result = mathcycle.Cycle1(input);
 
 
 
-            if (result1 == mathcycle.Cycle1(input)|| result2 == matchcycle2.Cycle2(input))
-            {
-                Console.WriteLine("your result is = " + result1);
-                Console.ReadLine();
+
+                Console.WriteLine("your result is = " + result);
+               
             }
-           
-                    
-                 
+            
+
+
         }
     }
 }

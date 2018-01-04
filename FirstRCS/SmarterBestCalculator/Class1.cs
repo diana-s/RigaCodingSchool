@@ -14,12 +14,11 @@ namespace SmarterBestCalculator
            string SecondEnteredNumber = "";
             char EnteredOperation = ' ';
             bool OperationFound = false;
-
-            int counter = 0;
-            while(counter < input.Length)
+            
+            for(int counter = 0;  counter < input.Length; counter++)
             {
                 char symbol = input[counter];
-                if (symbol == '+')
+                if (symbol == '+' || symbol == '-')
                 {
                     EnteredOperation = symbol;
                     OperationFound = true;
@@ -36,17 +35,29 @@ namespace SmarterBestCalculator
                         SecondEnteredNumber = SecondEnteredNumber + symbol;
                     }
                 }
-
-                counter = counter + 1;
-                if (OperationFound == true && counter == input.Length)
+                
+                if (OperationFound == true)
                 {
-                    int result = Int32.Parse(FirstEnteredNumber) + Int32.Parse(SecondEnteredNumber);
-                    return result;
+                    if (EnteredOperation == '+')
+                    {
+                        int result = Int32.Parse(FirstEnteredNumber) + this.Cycle1(input.Substring(counter + 1));
+                        return result;
+                    }
+                    else if (EnteredOperation == '-')
+                    {
+                        int result = Int32.Parse(FirstEnteredNumber) - this.Cycle1(input.Substring(counter + 1));
+                        return result;
+                    }
+                }
+                else if ((counter + 1) == input.Length)
+                {
+                    return Int32.Parse(FirstEnteredNumber);
                 }
 
                       
 
             }
+
             return 0;
             
        }

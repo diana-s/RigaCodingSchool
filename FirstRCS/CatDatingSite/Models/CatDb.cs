@@ -15,6 +15,8 @@ namespace CatDatingSite.Models
         //šeit pievienojam public DbSet<........> {get, set;} - un pievienojam, ka mums ir vēl viena tabula, kur glabājas 
         //kaut kādi dati!
         public DbSet<CatProfile> CatProfiles { get; set; }
+
+        public DbSet<File> Files { get; set; }
     }
 
 }

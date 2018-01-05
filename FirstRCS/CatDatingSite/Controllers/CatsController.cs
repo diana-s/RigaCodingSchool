@@ -78,7 +78,7 @@ namespace CatDatingSite.Controllers
         {
             if (ModelState.IsValid == false)
             {
-                return RedirectToAction("Index");
+                return View(userCreatedCat);
             }
             using (var CatDb = new CatDb())
             {
@@ -89,14 +89,37 @@ namespace CatDatingSite.Controllers
             }
         }
         [HttpPost]
-        public ActionResult EditCats(CatProfile catProfile)
+        //lai dabūtu failu, ko var pievienot serverī, pievieno HttpPosted.... + to, ko ievadijām pie EditCats apakšā name=uploadedPicture
+        public ActionResult EditCats(CatProfile catProfile, HttpPostedFileBase uploadedPicture)
         {
-           
+            if (ModelState.IsValid == false)
+            {
+                return View(catProfile);
+            }
             using (var CatDb = new CatDb())
             {
-                CatDb.Entry(catProfile).State =EntityState.Modified;
+                var profilePic = new File();
+                //saglabājam bildes faila nosaukumu
+                profilePic.FileName = System.IO.Path.GetFileName(uploadedPicture.FileName);
+                profilePic.ContentType = uploadedPicture.ContentType;
+
+                 //BinaryReader pārvērš bildi baitos
+                using (var reader = new System.IO.BinaryReader(uploadedPicture.InputStream))
+                {
+                    //saglabājam baitus datubāzes ierakstā
+                    profilePic.Content = reader.ReadBytes(uploadedPicture.ContentLength);
+                }
+
+                profilePic.CatProfileId = catProfile.CatID;
+                profilePic.CatProfile = catProfile;
+
+                CatDb.Files.Add(profilePic);
+
+                catProfile.ProfilePicture = profilePic;
+
+                CatDb.Entry(catProfile).State = EntityState.Modified;
                 CatDb.SaveChanges();
-                                
+
             }
 
             return RedirectToAction("Index");

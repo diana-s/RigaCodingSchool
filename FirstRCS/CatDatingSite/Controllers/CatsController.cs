@@ -9,6 +9,7 @@ namespace CatDatingSite.Controllers
     using CatDatingSite.Models;
     //Lai varētu izmantot AddOrUpdate funkciju ir jāpieraksta šis usings, kas apakšā :)
     using System.Data.Entity.Migrations;
+    using System.Data.Entity;
 
     public class CatsController : Controller
     {
@@ -90,16 +91,12 @@ namespace CatDatingSite.Controllers
         [HttpPost]
         public ActionResult EditCats(CatProfile catProfile)
         {
-            if (ModelState.IsValid == false)
-            {
-                return RedirectToAction("Index");
-            }
+           
             using (var CatDb = new CatDb())
             {
-                CatDb.CatProfiles.AddOrUpdate(catProfile);
+                CatDb.Entry(catProfile).State =EntityState.Modified;
                 CatDb.SaveChanges();
-
-                
+                                
             }
 
             return RedirectToAction("Index");

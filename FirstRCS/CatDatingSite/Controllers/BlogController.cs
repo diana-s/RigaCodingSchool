@@ -22,7 +22,7 @@ namespace CatDatingSite.Controllers
             blogFromDb.BlogImage = "https://ichef.bbci.co.uk/images/ic/208x117/p0517py6.jpg";
 
 
-            using (var blogDb = new BlogDb())
+            using (var blogDb = new CatDb())
             {
                
                 //iegūt blogu sarakstu no blogu datu bāzes tabulas
@@ -38,6 +38,25 @@ namespace CatDatingSite.Controllers
             {
                 return View();
             }
-        
+        [HttpPost]
+        public ActionResult AddBlog(Blog userBlog)
+        {
+            if (ModelState.IsValid == false)
+            {
+                return View(userBlog);
+            }
+
+            userBlog.BlogCreated = DateTime.Now;
+
+            userBlog.BlogEdited = DateTime.Now;
+
+            using (var BlogDb = new CatDb())
+            {
+                BlogDb.BlogProfiles.Add(userBlog);
+                BlogDb.SaveChanges();
+
+                return RedirectToAction("Index");
+            }
+        }
     }
 }

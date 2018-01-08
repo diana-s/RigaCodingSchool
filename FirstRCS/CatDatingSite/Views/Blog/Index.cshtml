@@ -10,7 +10,7 @@
 
 <div class="row">
 
-    @Html.ActionLink("pievienot Blogu", "AddBlog", "Blogs")
+    @Html.ActionLink("pievienot Blogu", "AddBlog", "Blog")
 
 
     <!-- nosākuma, kad nebija Lists,mēs likām meklēt name, age utt atModel.CatName
@@ -22,15 +22,15 @@
     {
        
     <div class="col-md-12">
-        @Html.ActionLink("Nodzēst Blogu", "DeleteBlog", "blogs", new { deletableBlogtId = blog.BlogID }, null)
-        <h2>Cat Name: @blog.BlogName</h2>
-        <p> Cat age is: @blog.BlogAuthor</p>
-        <img src="@blog.BlogImage" />
-        <p>
+
+        <center> <h2>@blog.BlogName</h2> </center>
+        <center><p> Autors: @blog.BlogAuthor, @blog.BlogCreated </p> </center>
+        <center> <img src="@blog.BlogImage" /> </center>
+        <center> <p>
             @blog.BlogDescription
-        </p>
-        @Html.ActionLink("rediģēt Blogu", "EditBlog", "blogs", new { editableBlogId = blog.BlogID }, null)
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+        </p> </center>
+        <p>@Html.ActionLink("rediģēt Blogu", "EditBlog", "Blog", new { editableBlogId = blog.BlogID }, null)</p>
+        <p> @Html.ActionLink("Nodzēst Blogu", "DeleteBlog", "Blog", new { deletableBlogtId = blog.BlogID }, null)</p>
     </div>
     }
 

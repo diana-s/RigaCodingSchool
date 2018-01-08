@@ -15,7 +15,7 @@ namespace CatDatingSite.Models
         //kaut kādi dati!
         public DbSet<Blog> BlogProfiles { get; set; }
 
-        public DbSet<BlogFiles> Files { get; set; }
+      
 
     }
 }

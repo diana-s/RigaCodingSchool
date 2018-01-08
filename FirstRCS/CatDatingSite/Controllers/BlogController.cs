@@ -16,6 +16,12 @@ namespace CatDatingSite.Controllers
         // GET: Blog
         public ActionResult Index()
         {
+            var blogFromDb = new Blog();
+           blogFromDb.BlogName = "Pūciņa";
+            blogFromDb.BlogAuthor = "Diana";
+            blogFromDb.BlogImage = "https://ichef.bbci.co.uk/images/ic/208x117/p0517py6.jpg";
+
+
             using (var blogDb = new BlogDb())
             {
                

@@ -16,7 +16,7 @@ namespace CatDatingSite.Models
         public string BlogName { get; set; }
 
         [Display(Name = "Autora vārds")]
-        public int BlogAuthor { get; set; }
+        public string BlogAuthor { get; set; }
 
         [Display(Name = "Bloga bilde")]
         public string BlogImage { get; set; }

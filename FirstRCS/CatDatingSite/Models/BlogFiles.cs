@@ -16,7 +16,7 @@ namespace CatDatingSite.Models
         public string ContentType { get; set; }
         public byte[] Content { get; set; }
         public int BlogProfileId { get; set; }
-        [Required]
+       
         public virtual Blog Blog { get; set; }
     }
 }

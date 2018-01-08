@@ -190,6 +190,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\CatsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -214,6 +215,9 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Blog.cs" />
+    <Compile Include="Models\BlogDb.cs" />
+    <Compile Include="Models\BlogFiles.cs" />
     <Compile Include="Models\CatDb.cs" />
     <Compile Include="Models\CatProfile.cs" />
     <Compile Include="Models\Files.cs" />
@@ -282,6 +286,9 @@
     <Content Include="Views\Cats\Index.cshtml" />
     <Content Include="Views\Cats\AddCats.cshtml" />
     <Content Include="Views\Cats\EditCats.cshtml" />
+    <Content Include="Views\Blog\AddBlog.cshtml" />
+    <Content Include="Views\Blog\Index.cshtml" />
+    <Content Include="Views\Blog\EditBlog.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -23,9 +23,9 @@
        
     <div class="col-md-12">
         @Html.ActionLink("Nodzēst Blogu", "DeleteBlog", "blogs", new { deletableBlogtId = blog.BlogID }, null)
-        <h2>Cat Name: @cat.BlogName</h2>
-        <p> Cat age is: @cat.BlogAuthor</p>
-        <img src="@cat.BlogImage" />
+        <h2>Cat Name: @blog.BlogName</h2>
+        <p> Cat age is: @blog.BlogAuthor</p>
+        <img src="@blog.BlogImage" />
         <p>
             @blog.BlogDescription
         </p>

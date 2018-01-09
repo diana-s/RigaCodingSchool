@@ -7,7 +7,7 @@
 
 <h2>AddCats</h2>
 
-@using (Html.BeginForm("AddCats", "Cats", FormMethod.Post))
+@using (Html.BeginForm("AddCats", "Cats", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     <div class="row">
         <div class="col-md-2"><b>Kaķa vārds:</b></div>
@@ -28,7 +28,15 @@
 
     <div class="row">
         <div class="col-md-2"><b>Kaķa attēls:</b></div>
-        <div class="col-md-2"><p>@Html.EditorFor(Model => Model.CatImage)</p></div>
+        <div class="col-md-2">
+                   <p>
+            <input type="file" id="uploadedPicture" name="uploadedPicture" size="23" />
+        </p>
+        <p>
+            <input type="submit" value="Upload file" />
+        </p>
+
+        </div>
         <p></p>
 
     </div>

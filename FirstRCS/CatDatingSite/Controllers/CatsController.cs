@@ -54,7 +54,7 @@ namespace CatDatingSite.Controllers
                 //kodus mēs pārveidojām kā komentāru :) (3 kodu augstāk)
 
                 //iegūt kaķu sarakstu no kaķu datu bāzes tabulas
-                var catListFromDb = catDb.CatProfiles.ToList();
+                var catListFromDb = catDb.CatProfiles.Include(rec => rec.ProfilePicture).ToList();
 
                 //iegūst skatu ar kaķiem no tabulas
                 return View(catListFromDb);
@@ -62,8 +62,16 @@ namespace CatDatingSite.Controllers
             }
 
         }
+        //funkcija, kas ļauj izvilt profila bildes failu no datu bāzes, lai viņš parādītos lietotājam Index skatā
 
-       
+        public ActionResult GetCatProfilePicture(int catProfilePictureId)
+        {
+            using (var db = new CatDb())
+            {
+                var profilePic = db.Files.First(rec => rec.FileId == catProfilePictureId);
+                return File(profilePic.Content, profilePic.ContentType);
+            }
+        }
 
         public ActionResult AddCats()
         {

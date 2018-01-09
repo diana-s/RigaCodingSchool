@@ -6,6 +6,7 @@ using System.Web;
 namespace CatDatingSite.Models
 {
     using System.ComponentModel.DataAnnotations;
+    
 
     public class File
     {
@@ -18,5 +19,6 @@ namespace CatDatingSite.Models
         public int CatProfileId { get; set; }
         [Required]
         public virtual CatProfile CatProfile { get; set; }
+       
     }
 }

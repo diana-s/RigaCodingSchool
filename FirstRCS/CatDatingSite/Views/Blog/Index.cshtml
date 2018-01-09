@@ -10,7 +10,10 @@
 
 <div class="row">
 
-    @Html.ActionLink("pievienot Blogu", "AddBlog", "Blog")
+    <p>
+        @Html.ActionLink("pievienot Blogu", "AddBlog", "Blog")
+    </p>
+ 
 
 
     <!-- nosākuma, kad nebija Lists,mēs likām meklēt name, age utt atModel.CatName
@@ -24,13 +27,13 @@
     <div class="col-md-12">
 
         <center> <h2>@blog.BlogName</h2> </center>
-        <center><p> Autors: @blog.BlogAuthor, @blog.BlogCreated </p> </center>
+        <center><p> Autors: @blog.BlogAuthor, @blog.BlogCreated, @blog.BlogEdited </p> </center>
         <center> <img src="@blog.BlogImage" /> </center>
         <center> <p>
             @blog.BlogDescription
         </p> </center>
-        <p>@Html.ActionLink("rediģēt Blogu", "EditBlog", "Blog", new { editableBlogId = blog.BlogID }, null)</p>
-        <p> @Html.ActionLink("Nodzēst Blogu", "DeleteBlog", "Blog", new { deletableBlogtId = blog.BlogID }, null)</p>
+        <p><center>@Html.ActionLink("Rediģēt Blogu", "EditBlog", "Blog", new { editableBlogId = blog.BlogID }, null)</center></p>
+        <p><center> @Html.ActionLink("Nodzēst Blogu", "DeleteBlog", "Blog", new { deletableBlogId = blog.BlogID }, null)</center></p>
     </div>
     }
 

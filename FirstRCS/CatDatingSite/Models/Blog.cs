@@ -10,7 +10,7 @@ namespace CatDatingSite.Models
     public class Blog
     {
         
-     
+     [Key]
         public int BlogID { get; set; }
         [Display(Name = "Virsraksts")]
         [Required(ErrorMessage = "Virsrakstam noteikti jabūt norādītam")]

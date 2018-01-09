@@ -132,7 +132,6 @@ namespace CatDatingSite.Controllers
             {
                 var editableCat = CatDb.CatProfiles.First(CatProfile => CatProfile.CatID == editableCatId);
                
-                CatDb.SaveChanges();
 
                 return View("EditCats", editableCat);
             }

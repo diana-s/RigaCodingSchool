@@ -16,12 +16,7 @@ namespace CatDatingSite.Controllers
         // GET: Blog
         public ActionResult Index()
         {
-            var blogFromDb = new Blog();
-           blogFromDb.BlogName = "Pūciņa";
-            blogFromDb.BlogAuthor = "Diana";
-            blogFromDb.BlogImage = "https://ichef.bbci.co.uk/images/ic/208x117/p0517py6.jpg";
-
-
+           
             using (var blogDb = new CatDb())
             {
                
@@ -58,5 +53,56 @@ namespace CatDatingSite.Controllers
                 return RedirectToAction("Index");
             }
         }
+        
+        public ActionResult EditBlog(int editableBlogId)
+
+        {
+           
+            using (var BlogDb = new CatDb())
+            {
+                var editableBlogt = BlogDb.BlogProfiles.First(Blog =>Blog.BlogID == editableBlogId);
+               
+
+                return View("EditBlog", editableBlogt);
+
+               
+            }
+            
+        } 
+
+        [HttpPost]
+        public ActionResult EditBlog(Blog model)
+        {
+
+            if (ModelState.IsValid == false)
+            {
+                return View(model);
+            }
+
+            using(var BlogDb = new CatDb())
+            {
+
+                BlogDb.Entry(model).State = EntityState.Modified;
+                model.BlogEdited = DateTime.Now;
+                BlogDb.SaveChanges();
+            }
+
+            return RedirectToAction("Index");
+        }
+        
+        public ActionResult DeleteBlog(int deletableBlogId)
+
+        {
+            using (var BlogDb = new CatDb())
+            {
+                var deletableBlog = BlogDb.BlogProfiles.First(Blog => Blog.BlogID == deletableBlogId);
+                BlogDb.BlogProfiles.Remove(deletableBlog);
+                BlogDb.SaveChanges();
+            }
+            return RedirectToAction("Index");
+
+        }
+
+
     }
 }
